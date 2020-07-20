@@ -19,9 +19,9 @@ function logSetGetTournamentsCommand(action, command, logger = currentLogger) {
 module.exports = {
     logSetGetTournamentsCommand,
     setLogger: (theLogger) => {
-        if (theLogger)
+        if (theLogger && !currentLogger) {
             currentLogger = theLogger;
-        else
-            console.log('No logger provided');
-    }
+        }
+    },
+    getLogger: () => currentLogger,
 };
