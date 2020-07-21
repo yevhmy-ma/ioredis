@@ -3,7 +3,7 @@ var _ = require('../utils/lodash');
 var Command = require('../command').default;
 var SubscriptionSet = require('../SubscriptionSet').default;
 var debug = require('../utils/debug')('ioredis:reply');
-var Parser = require('../redis-parser');
+var Parser = require('./redis-parser');
 const { getLogger } = require('../loggetsettournaments');
 function logFatalParserError(err) {
     const { message, buffer, offset } = err;
